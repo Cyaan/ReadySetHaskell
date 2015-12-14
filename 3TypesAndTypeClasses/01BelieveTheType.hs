@@ -11,7 +11,6 @@ By using the :t in ghci we can examine the types of expressions
 
 Char is of type character
 [Char] is of type string
-Num is of type number
 Bool is of type boolean
 (True, 'a') is pair of a boolean and a character
 ('a','b','c') is triple of three characters
@@ -49,6 +48,6 @@ circumference' r = 2 * pi * r
 
 --Char represents a characters. It's denoted by single quotes. A list of characters is a string
 
---Tuples are types but they are dependent on their length as wel as the types of their components
+--Tuples are types but they are dependent on their length as well as the types of their components
 
 --An empty Tuple () is also a type which can only have a single value: ()

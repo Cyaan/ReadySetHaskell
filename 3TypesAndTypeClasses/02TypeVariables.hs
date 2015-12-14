@@ -3,7 +3,7 @@ because it allows us to easilty write very general functions if they don't use a
 behavior of the types in them. Functions with type variables are called polymorphic Functions.
 Type variables don't start with a capital case.
 
-The head function has a list that contains a type variable and the returns a type variable.
+The head function has a list that contains a type variable and then returns a type variable.
 head :: [a] -> a
 
 The function fst has a pair that contains two type variables and returns the element of the 

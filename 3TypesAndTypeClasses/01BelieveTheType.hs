@@ -11,7 +11,6 @@ By using the :t in ghci we can examine the types of expressions
 
 Char is of type character
 [Char] is of type string
-Num is of type number
 Bool is of type boolean
 (True, 'a') is pair of a boolean and a character
 ('a','b','c') is triple of three characters

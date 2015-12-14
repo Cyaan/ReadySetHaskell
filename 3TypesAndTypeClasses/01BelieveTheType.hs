@@ -48,6 +48,6 @@ circumference' r = 2 * pi * r
 
 --Char represents a characters. It's denoted by single quotes. A list of characters is a string
 
---Tuples are types but they are dependent on their length as wel as the types of their components
+--Tuples are types but they are dependent on their length as well as the types of their components
 
 --An empty Tuple () is also a type which can only have a single value: ()

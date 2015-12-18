@@ -11,7 +11,7 @@ lucky 7 = "LUCKY NUMBER SEVEN"
 lucky x = "Sorry, you're out of luck, pal!"
 
 {-
-When you the lucky function, the patterns will be checked from top to bottom
+When you call the lucky function, the patterns will be checked from top to bottom
 and when it conforms to a pattern, the correspoding function body will be used.
 -}
 
@@ -24,7 +24,7 @@ sayMe 4 = "Four!"
 sayMe 5 = "Five!"
 sayMe x = "Not between 1 and 5"
 
---If sayMe x wasn't the last patter, it would always be "Not between 1 and 5"
+--If sayMe x wasn't the last pattern, it would always be "Not between 1 and 5"
 
 --The factorial function defined recursively
 factorial :: (Integral a) => a -> a

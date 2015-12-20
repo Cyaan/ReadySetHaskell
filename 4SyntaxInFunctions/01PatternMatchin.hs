@@ -5,14 +5,16 @@ When defining funtions, you can define seperate function bodies for different pa
 You can pattern match on any data type -numbers, characters, lists, tuples, etc.
 -}
 
---A function that checks if the number we supplied to it is seven or not
+--A function that checks if the number that we supplied to it is seven or not
 lucky :: (Integral a) => a -> String
 lucky 7 = "LUCKY NUMBER SEVEN"
 lucky x = "Sorry, you're out of luck, pal!"
 
 {-
 When you call the lucky function, the patterns will be checked from top to bottom
-and when it conforms to a pattern, the correspoding function body will be used.
+and when it conforms to a pattern, the corresponding function body will be used.
+The last function needs to take every possible value or else we get an error for
+the values that we don't define.
 -}
 
 --A Function that checks if the entered number is between 1 and 5
@@ -23,8 +25,6 @@ sayMe 3 = "Three!"
 sayMe 4 = "Four!"
 sayMe 5 = "Five!"
 sayMe x = "Not between 1 and 5"
-
---If sayMe x wasn't the last pattern, it would always be "Not between 1 and 5"
 
 --The factorial function defined recursively
 factorial :: (Integral a) => a -> a
@@ -49,7 +49,7 @@ second (_, y, _) = y
 third :: (a, b, c) -> c
 third (_, _, z) = z
 
---The _ stands for evey value that we didn't specify
+--The _ stands for every value that we didn't specify
 
 --Using pattern matching on list comprehension
 xs = [(1,3), (4,3), (2,4), (5,3), (5,6), (3,1)]  
@@ -59,6 +59,11 @@ addpair = [ a + b | (a,b) <- xs]
 head' :: [a] -> a
 head' [] = error "Can't call head on an empty list, dummy!"
 head' (x:_) = x
+
+last' :: [a] -> a
+last' [] = error "No data found"
+last' [x] = x
+last' (_:xs) = last' xs
 
 tell :: (Show a) => [a] -> String
 tell [] = "The list is empty"
@@ -74,6 +79,9 @@ sum' :: (Num a) => [a] -> a
 sum' [] = 0
 sum' (x:xs) = x + sum' xs
 
+-- as patterns 
 capital :: String -> String
 capital "" = "Empty string, whoops!"
 capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x]
+
+--You can't use ++ in pattern matches

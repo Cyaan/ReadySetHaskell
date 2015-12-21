@@ -55,4 +55,3 @@ calcBmis xs = [bmi w h | (w, h) <- xs]
     where bmi weight height = weight / height ^ 2
 
 --Where can also be nested, we can define a function with a helper function that also has it's own helper function.
-

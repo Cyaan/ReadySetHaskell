@@ -5,7 +5,7 @@ In haskell they are also expressions and we can use also pattern matching with t
 
 --These two pieces of code can be used interchangeable
 head'        :: [a] -> a
-head' []     =  error "No head for empty lists!"
+head' []    =  error "No head for empty lists!"
 head' (x:_) = x
 
 head'' :: [a] -> a
